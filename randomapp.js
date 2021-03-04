@@ -19,30 +19,35 @@ app.controller("generator", function($scope){
 	$scope.choose = function(){
 		switch ($scope.selected){
 			case "2": 
+			$scope.uno = true;
 			$scope.due = true;
 			$scope.tre = false;
 			$scope.quattro = false;
 			$scope.cinque = false;
 			break;
 			case "3": 
+			$scope.uno = true;
 			$scope.due = true;
 			$scope.tre = true;
 			$scope.quattro = false;
 			$scope.cinque = false;
 			break;
 			case "4": 
+			$scope.uno = true;
 			$scope.due = true;
 			$scope.tre = true;
 			$scope.quattro = true;
 			$scope.cinque = false;
 			break;
 			case "5": 
+			$scope.uno = true;
 			$scope.due = true;
 			$scope.tre = true;
 			$scope.quattro = true;
 			$scope.cinque = true;
 			break;
 			default:
+			$scope.uno = true;
 			$scope.due = false;
 			$scope.tre = false;
 			$scope.quattro = false;

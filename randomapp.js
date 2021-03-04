@@ -1,6 +1,6 @@
 var app = angular.module("randomApp", []);
 
-app.controller("generator", function($scope){
+app.controller("ctrl", function($scope){
 
 
 	$scope.top1 = "Topic 1";
@@ -19,6 +19,11 @@ app.controller("generator", function($scope){
 	$scope.choose = function(){
 		switch ($scope.selected){
 			case "2": 
+	$scope.top1 = "Topic 1";
+	$scope.top2 = "Topic 2";
+	$scope.top3 = "Topic 3";
+	$scope.top4 = "Topic 4";
+	$scope.top5 = "Topic 5";
 			$scope.uno = true;
 			$scope.due = true;
 			$scope.tre = false;
@@ -26,6 +31,11 @@ app.controller("generator", function($scope){
 			$scope.cinque = false;
 			break;
 			case "3": 
+	$scope.top1 = "Topic 1";
+	$scope.top2 = "Topic 2";
+	$scope.top3 = "Topic 3";
+	$scope.top4 = "Topic 4";
+	$scope.top5 = "Topic 5";
 			$scope.uno = true;
 			$scope.due = true;
 			$scope.tre = true;
@@ -33,6 +43,11 @@ app.controller("generator", function($scope){
 			$scope.cinque = false;
 			break;
 			case "4": 
+	$scope.top1 = "Topic 1";
+	$scope.top2 = "Topic 2";
+	$scope.top3 = "Topic 3";
+	$scope.top4 = "Topic 4";
+	$scope.top5 = "Topic 5";
 			$scope.uno = true;
 			$scope.due = true;
 			$scope.tre = true;
@@ -40,6 +55,11 @@ app.controller("generator", function($scope){
 			$scope.cinque = false;
 			break;
 			case "5": 
+	$scope.top1 = "Topic 1";
+	$scope.top2 = "Topic 2";
+	$scope.top3 = "Topic 3";
+	$scope.top4 = "Topic 4";
+	$scope.top5 = "Topic 5";
 			$scope.uno = true;
 			$scope.due = true;
 			$scope.tre = true;
@@ -47,6 +67,11 @@ app.controller("generator", function($scope){
 			$scope.cinque = true;
 			break;
 			default:
+	$scope.top1 = "Topic 1";
+	$scope.top2 = "Topic 2";
+	$scope.top3 = "Topic 3";
+	$scope.top4 = "Topic 4";
+	$scope.top5 = "Topic 5";
 			$scope.uno = true;
 			$scope.due = false;
 			$scope.tre = false;
@@ -76,10 +101,10 @@ app.controller("generator", function($scope){
 	"Jungle", "Sunbathing", "Dudes", "Mermaid", "Fairy", "Teapot", "Labyrinth", "Traffic", "Girl", "Boy", "Cherries", "Waffles", "Apple", "Kiwis"]
 
 	$scope.random = function(){
-		$scope.top1 = $scope.subject[Math.floor(Math.random()*(204-0)+1)];
-		$scope.top2 = $scope.subject[Math.floor(Math.random()*(204-0)+1)];
-		$scope.top3 = $scope.subject[Math.floor(Math.random()*(204-0)+1)];
-		$scope.top4 = $scope.subject[Math.floor(Math.random()*(204-0)+1)];
-		$scope.top5 = $scope.subject[Math.floor(Math.random()*(204-0)+1)];
+		$scope.top1 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top2 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top3 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top4 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top5 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
 	};
 });

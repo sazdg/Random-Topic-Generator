@@ -1,4 +1,4 @@
-var app = angular.module("randomApp", []);
+var app = angular.module("randomApp", ["ngAnimate"]);
 
 app.controller("ctrl", function($scope){
 
@@ -98,13 +98,32 @@ app.controller("ctrl", function($scope){
 	//from pinterest
 	"Cigarette", "Smoking", "Ramen", "Pizza", "Pasta", "Coffee", "Fire", "People", "Chairs", "Planets", "Space", "Solar system", "Pattern", "Cup of tea", "Room",
 	"Eyes", "Lips", "Hands", "House Plant", "Winter", "Summer", "Spring", "Autumn", "Skull", "Lamp", "Face", "Mix Tape", "Gun", "Books", "Dance", "Hotel", "Palm Leaf", 
-	"Jungle", "Sunbathing", "Dudes", "Mermaid", "Fairy", "Teapot", "Labyrinth", "Traffic", "Girl", "Boy", "Cherries", "Waffles", "Apple", "Kiwis"]
+	"Jungle", "Sunbathing", "Dudes", "Mermaid", "Fairy", "Teapot", "Labyrinth", "Traffic", "Girl", "Boy", "Cherries", "Waffles", "Apple", "Kiwis"];
+
+
 
 	$scope.random = function(){
+	if($scope.uno == true){
+		$scope.top1 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+	} if($scope.uno == true && $scope.due == true){
+		$scope.top1 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top2 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+	} if($scope.uno == true && $scope.due == true && $scope.tre == true){
+		$scope.top1 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top2 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top3 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+	} if($scope.uno == true && $scope.due == true && $scope.tre == true && $scope.quattro == true){
+		$scope.top1 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top2 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top3 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top4 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+	} if($scope.uno == true && $scope.due == true && $scope.tre == true && $scope.quattro == true && $scope.cinque == true){
 		$scope.top1 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
 		$scope.top2 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
 		$scope.top3 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
 		$scope.top4 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
 		$scope.top5 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
 	};
+	};
+
 });

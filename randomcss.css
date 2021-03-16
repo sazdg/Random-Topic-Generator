@@ -26,10 +26,10 @@ div.row {
 	margin: 0px;
 }
 .argomento {
-	border: 2px solid #B7DAE1;
+	border: 3px solid #16697A;
 	border-top-left-radius: 20px;
 	border-bottom-right-radius: 20px;
-	background-color: #B7DAE1;
+	background-color: #fff;
 	box-shadow: 5px 5px #EDE7E3;
 	height: 20%;
 	width: 50%;
@@ -37,14 +37,29 @@ div.row {
 	padding: 1em;
 	position: static;
 }
+
+span.ng-binding {
+	transition: linear 1s;
+	-webkit-transition: linear 1s;
+    -moz-transition: linear 1s;
+    -ms-transition: linear 1s;
+    -o-transition: linear 1s;
+	animation: mymove 1s infinite;
+}
+
+#keyframes mymove {
+	from {opacity: 0;}
+	to {opacity: 100;}
+}
+
 select, #select {
 	padding: 7px;
-	border: 2px solid #FFA62B;
+	border: 3px solid #FFA62B;
 	border-radius: 15px;
 	margin: 10px;
 }
 select:hover {
-	border: 2px solid #FFA62B;
+	border: 3px solid #FFA62B;
 	border-radius: 15px;
 }
 button {

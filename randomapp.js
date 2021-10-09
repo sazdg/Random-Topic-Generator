@@ -98,32 +98,40 @@ app.controller("ctrl", function($scope){
 	//from pinterest
 	"Cigarette", "Smoking", "Ramen", "Pizza", "Pasta", "Coffee", "Fire", "People", "Chairs", "Planets", "Space", "Solar system", "Pattern", "Cup of tea", "Room",
 	"Eyes", "Lips", "Hands", "House Plant", "Winter", "Summer", "Spring", "Autumn", "Skull", "Lamp", "Face", "Mix Tape", "Gun", "Books", "Dance", "Hotel", "Palm Leaf", 
-	"Jungle", "Sunbathing", "Dudes", "Mermaid", "Fairy", "Teapot", "Labyrinth", "Traffic", "Girl", "Boy", "Cherries", "Waffles", "Apple", "Kiwis"];
+	"Jungle", "Sunbathing", "Dudes", "Mermaid", "Fairy", "Teapot", "Labyrinth", "Traffic", "Girl", "Boy", "Cherries", "Waffles", "Apple", "Kiwis","Crowd"];
 
 
 
 	$scope.random = function(){
+
+	var number = Math.floor(Math.random() * (204 - 0) + 1);
 	if($scope.uno == true){
-		$scope.top1 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top1 = $scope.subject[number];
 	} if($scope.uno == true && $scope.due == true){
-		$scope.top1 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
-		$scope.top2 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top1 = $scope.subject[number];
+		$scope.top2 = $scope.subject[number];
 	} if($scope.uno == true && $scope.due == true && $scope.tre == true){
-		$scope.top1 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
-		$scope.top2 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
-		$scope.top3 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top1 = $scope.subject[number];
+		$scope.top2 = $scope.subject[number];
+		$scope.top3 = $scope.subject[number];
 	} if($scope.uno == true && $scope.due == true && $scope.tre == true && $scope.quattro == true){
-		$scope.top1 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
-		$scope.top2 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
-		$scope.top3 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
-		$scope.top4 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top1 = $scope.subject[number];
+		$scope.top2 = $scope.subject[number];
+		$scope.top3 = $scope.subject[number];
+		$scope.top4 = $scope.subject[number];
 	} if($scope.uno == true && $scope.due == true && $scope.tre == true && $scope.quattro == true && $scope.cinque == true){
-		$scope.top1 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
-		$scope.top2 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
-		$scope.top3 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
-		$scope.top4 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
-		$scope.top5 = $scope.subject[Math.floor(Math.random()*(203-0)+1)];
+		$scope.top1 = $scope.subject[number];
+		$scope.top2 = $scope.subject[number];
+		$scope.top3 = $scope.subject[number];
+		$scope.top4 = $scope.subject[number];
+		$scope.top5 = $scope.subject[number];
 	};
+	};
+
+	$scope.color = ['#15202B'];
+	$scope.style = function(value) {
+		return { "background-color": value};
+
 	};
 
 });

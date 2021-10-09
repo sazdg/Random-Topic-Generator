@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Random Topic Generator</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Random Topic Generator" />
+	<meta name="author" content="Sara De Grandis" />
+	<link rel="stylesheet" type="text/css" href="randomcss.css" />
+	<link rel="icon" type="image/x-icon" href="bright-mind.png" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+	<!--Google Font-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:wght@900&family=Teko:wght@700&display=swap" rel="stylesheet">
+	<!--Boostrap CSS CDN--> 
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<!--JQUERY CDN-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<!--Bootstrap Javascript CDN-->
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+ 
+	</head>
+
+		<body ng-app="randomApp" ng-controller="ctrl">
+			<nav>
+			<div class="row">
+			<div class="navbar container-fluid text-center" id="nav">
+				<!--<h2><bold>RANDOM visualization TOPICS for illustrations and arts GENERATOR</bold></h2>-->
+				<h2><bold>TOPIC GENERATOR</bold></h2>
+			</div>
+		</div>
+
+			</nav>
+		<div class="row">
+		<div class="container-fluid text-center corpo">
+			<br>
+			<br>
+			<p id="enjoy"> Choose how many topics you want,<br>
+				Click the button to see a random result.<br>
+				Enjoy</p><br>
+				<label for="number">Select a number of topics</label><br>
+				<select id="select" name="number" ng-change="choose()" ng-model="selected">
+				<option value="1">1 topic</option>
+				<option value="2">2 topics</option>
+				<option value="3">3 topics</option>
+				<option value="4">4 topics</option>
+				<option value="5">5 topics</option>
+				</select><br>
+
+
+			
+				<button ng-click="random()" id="start">START</button><br><br>
+
+				<div class="argomento" ng-show="uno"><span>{{ top1 }}</span></div>
+				<div class="argomento" ng-show="due"><span>{{ top2 }}</span></div>
+				<div class="argomento" ng-show="tre"><span>{{ top3 }}</span></div>
+				<div class="argomento" ng-show="quattro"><span>{{ top4 }}</span></div>
+				<div class="argomento" ng-show="cinque"><span>{{ top5 }}</span></div>
+				<br><br>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="container-fluid footer">
+			<div class="text-center">
+			<span>2021cc Sara De Grandis</span>
+			</div>
+		</div>
+	</div>
+
+
+	<!--Angular-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  	<script src="randomapp.js"></script>
+
+   	<!--ngAnimate google CDN-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.js"></script>
+	</body>
+</html>

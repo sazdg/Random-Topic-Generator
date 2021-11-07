@@ -6,6 +6,10 @@ body.ng-scope {
 	font-size: 20px;
 	color:#EDE7E3
 }
+::selection {
+	background-color: #ffc71f;
+	color: #151923;
+}
 h2 {
 	padding: 10px;
 	margin: auto;
@@ -39,7 +43,6 @@ div.row {
 	padding: 1em;
 	position: static;
 }s
-
 select, #select {
 	padding: 7px;
 	border: 3px solid #FFA62B;

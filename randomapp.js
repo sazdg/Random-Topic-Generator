@@ -104,7 +104,7 @@ app.controller("ctrl", function($scope){
 	$scope.numero = Math.floor(Math.random() * ($scope.len + 1));
 
 	$scope.random = function(){
-		for(var i = 0; i < 6; i++){
+		for(var i = 0; i < $scope.selected; i++){
 			$scope.top1 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
 			$scope.top2 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
 			$scope.top3 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];

@@ -103,33 +103,14 @@ app.controller("ctrl", function($scope){
 	$scope.len = $scope.subject.length;
 	$scope.numero = Math.floor(Math.random() * ($scope.len + 1));
 
+	$scope.sub = ["subject 1", "subject 2", "subject 3", "subject 4", "subject 5"];
+
+	
 	$scope.random = function(){
-		switch($scope.selected){
-			case '1':
-				$scope.top1 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				break;
-			case '2':
-				$scope.top1 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				$scope.top2 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				break;
-			case '3':
-				$scope.top1 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				$scope.top2 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				$scope.top3 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				break;
-			case '4':
-				$scope.top1 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				$scope.top2 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				$scope.top3 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				$scope.top4 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				break;
-			case '5':
-				$scope.top1 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				$scope.top2 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				$scope.top3 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				$scope.top4 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				$scope.top5 = $scope.subject[Math.floor(Math.random() * ($scope.len + 1))];
-				break;
+		for(let i = 0; i < ($scope.selected); i++){
+			$scope.sub[i] = $scope.subject[Math.floor(Math.random() * ($scope.len))];
 		}
+
 	}
+
 });

@@ -96,7 +96,7 @@ app.controller("ctrl", function($scope){
 	"Circle", "Triangle", "Rectangle", "Pentagon", "Hexagon", "Octagon", "Oval", "Star", "Pyramid", "Cube", 
 	"Laptop", "Mobile", "Phone", "PC", "Narrow", "Thin", "Wide", "Light", "Dark", "Open", "Close", "Full", "Empty", "Dead", 
 	"Cigarette", "Smoking", "Ramen", "Pizza", "Pasta", "Coffee", "Fire", "People", "Chairs", "Planets", "Space", "Solar system", "Pattern", "Cup of tea", "Room",
-	"Eyes", "Lips", "Hands", "House Plant", "Winter", "Summer", "Spring", "Autumn", "Skull", "Lamp", "Face", "Mix Tape", "Gun", "Books", "Dance", "Hotel", "Palm Leaf", 
+	"Eyes", "Lips", "Hands", "Houseplant", "Winter", "Summer", "Spring", "Autumn", "Skull", "Lamp", "Face", "Mix Tape", "Gun", "Books", "Dance", "Hotel", "Palm Leaf", 
 	"Jungle", "Sunbathing", "Dudes", "Mermaid", "Fairy", "Teapot", "Labyrinth", "Traffic", "Girl", "Boy", "Cherries", "Waffles", "Apple", "Kiwis","Crowd"];
 
 

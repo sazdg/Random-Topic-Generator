@@ -38,11 +38,36 @@ div.row {
 	color: #EDE7E3;
 	box-shadow: 5px 5px #1f788a;
 	height: 20%;
-	width: 50%;
-	margin: 10px auto 20px auto;
+	width: 30%;
+	margin: 10px;
 	padding: 1em;
 	position: static;
-}s
+}
+/*.container{
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-end;
+}*/
+
+.sub {
+	display: flex;
+	align-items: center;
+}
+
+.lock-open {
+	width: 40px;
+	height: 40px;
+	background-color: antiquewhite;
+	box-shadow: none;
+}
+
+.lock-close {
+	width: 40px;
+	height: 40px;
+	background-color:crimson;
+	box-shadow: none;
+}
+
 select, #select {
 	padding: 7px;
 	border: 3px solid #FFA62B;
@@ -67,6 +92,10 @@ button {
 	margin: 15px;
 	height: 2em;
 }
+#reset {
+	background-color: #ff552b;
+	box-shadow: 5px 5px #ff7f7b;
+}
 .footer {
 	background-color: #16697A;
 	padding: 2em;
@@ -74,3 +103,5 @@ button {
 	bottom: 0;
 	width: 100%;
 }
+
+

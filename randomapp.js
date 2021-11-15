@@ -3,12 +3,6 @@ var app = angular.module("randomApp", ["ngAnimate"]);
 app.controller("ctrl", function($scope){
 
 
-	$scope.top1 = "Topic 1";
-	$scope.top2 = "Topic 2";
-	$scope.top3 = "Topic 3";
-	$scope.top4 = "Topic 4";
-	$scope.top5 = "Topic 5";
-
 	$scope.selected = "1";
 	$scope.uno = true;
 	$scope.due = false;
@@ -19,11 +13,7 @@ app.controller("ctrl", function($scope){
 	$scope.choose = function(){
 		switch ($scope.selected){
 			case "2": 
-	$scope.top1 = "Topic 1";
-	$scope.top2 = "Topic 2";
-	$scope.top3 = "Topic 3";
-	$scope.top4 = "Topic 4";
-	$scope.top5 = "Topic 5";
+
 			$scope.uno = true;
 			$scope.due = true;
 			$scope.tre = false;
@@ -31,11 +21,7 @@ app.controller("ctrl", function($scope){
 			$scope.cinque = false;
 			break;
 			case "3": 
-	$scope.top1 = "Topic 1";
-	$scope.top2 = "Topic 2";
-	$scope.top3 = "Topic 3";
-	$scope.top4 = "Topic 4";
-	$scope.top5 = "Topic 5";
+
 			$scope.uno = true;
 			$scope.due = true;
 			$scope.tre = true;
@@ -43,11 +29,7 @@ app.controller("ctrl", function($scope){
 			$scope.cinque = false;
 			break;
 			case "4": 
-	$scope.top1 = "Topic 1";
-	$scope.top2 = "Topic 2";
-	$scope.top3 = "Topic 3";
-	$scope.top4 = "Topic 4";
-	$scope.top5 = "Topic 5";
+
 			$scope.uno = true;
 			$scope.due = true;
 			$scope.tre = true;
@@ -55,11 +37,7 @@ app.controller("ctrl", function($scope){
 			$scope.cinque = false;
 			break;
 			case "5": 
-	$scope.top1 = "Topic 1";
-	$scope.top2 = "Topic 2";
-	$scope.top3 = "Topic 3";
-	$scope.top4 = "Topic 4";
-	$scope.top5 = "Topic 5";
+
 			$scope.uno = true;
 			$scope.due = true;
 			$scope.tre = true;
@@ -67,17 +45,29 @@ app.controller("ctrl", function($scope){
 			$scope.cinque = true;
 			break;
 			default:
-	$scope.top1 = "Topic 1";
-	$scope.top2 = "Topic 2";
-	$scope.top3 = "Topic 3";
-	$scope.top4 = "Topic 4";
-	$scope.top5 = "Topic 5";
+
 			$scope.uno = true;
 			$scope.due = false;
 			$scope.tre = false;
 			$scope.quattro = false;
 			$scope.cinque =false;
 		};
+	};
+
+	//lock icon toggle
+	$scope.open = ["747315.png", "747315.png", "747315.png", "747315.png", "747315.png"];
+	$scope.lock = [true, true, true, true, true, true];
+
+	//toggle 
+	$scope.locker = function (number) {
+		if ($scope.lock[number]) {//if click, lock the result
+			$scope.lock[number] = false;
+			$scope.open[number] = "747305.png";
+			console.log($scope.lock[number]);
+		} else {
+			$scope.lock[number] = true;
+			$scope.open[number] = "747315.png";
+		}
 	};
 
 	$scope.subject = [ "Cat", "Dog", "Fish", "Snake", "Rabbit", "Shark", "Squirrel", "Dragon", "Dinosaur",
@@ -99,18 +89,28 @@ app.controller("ctrl", function($scope){
 	"Eyes", "Lips", "Hands", "Houseplant", "Winter", "Summer", "Spring", "Autumn", "Skull", "Lamp", "Face", "Mix Tape", "Gun", "Books", "Dance", "Hotel", "Palm Leaf", 
 	"Jungle", "Sunbathing", "Dudes", "Mermaid", "Fairy", "Teapot", "Labyrinth", "Traffic", "Girl", "Boy", "Cherries", "Waffles", "Apple", "Kiwis","Crowd"];
 
-
+	//random results function
 	$scope.len = $scope.subject.length;
 	$scope.numero = Math.floor(Math.random() * ($scope.len + 1));
 
 	$scope.sub = ["subject 1", "subject 2", "subject 3", "subject 4", "subject 5"];
+	$scope.save = ["","","","",""];
 
 	
 	$scope.random = function(){
 		for(let i = 0; i < ($scope.selected); i++){
-			$scope.sub[i] = $scope.subject[Math.floor(Math.random() * ($scope.len))];
+			if($scope.lock[i]){
+				//if true, display a new subject
+				$scope.sub[i] = $scope.subject[Math.floor(Math.random() * ($scope.len))];
+			} else {
+				//save result and skip
+				$scope.save[i] = $scope.sub[i];
+			}
 		}
+	};
 
-	}
+	$scope.reset = function(){
+		window.location.reload();
+	};
 
 });

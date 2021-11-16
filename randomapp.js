@@ -2,61 +2,25 @@ var app = angular.module("randomApp", ["ngAnimate"]);
 
 app.controller("ctrl", function($scope){
 
-
 	$scope.selected = "1";
-	$scope.uno = true;
-	$scope.due = false;
-	$scope.tre = false;
-	$scope.quattro = false;
-	$scope.cinque = false;
+	$scope.topics = [true, false, false, false, false];
 
 	$scope.choose = function(){
-		switch ($scope.selected){
-			case "2": 
-
-			$scope.uno = true;
-			$scope.due = true;
-			$scope.tre = false;
-			$scope.quattro = false;
-			$scope.cinque = false;
-			break;
-			case "3": 
-
-			$scope.uno = true;
-			$scope.due = true;
-			$scope.tre = true;
-			$scope.quattro = false;
-			$scope.cinque = false;
-			break;
-			case "4": 
-
-			$scope.uno = true;
-			$scope.due = true;
-			$scope.tre = true;
-			$scope.quattro = true;
-			$scope.cinque = false;
-			break;
-			case "5": 
-
-			$scope.uno = true;
-			$scope.due = true;
-			$scope.tre = true;
-			$scope.quattro = true;
-			$scope.cinque = true;
-			break;
-			default:
-
-			$scope.uno = true;
-			$scope.due = false;
-			$scope.tre = false;
-			$scope.quattro = false;
-			$scope.cinque =false;
-		};
+		// toggle display topics
+		for(let i = 0; i < ($scope.selected); i++){
+			if(!$scope.topics[i])
+				$scope.topics[i] = true
+		}
+		//toggle hide topics
+		for(let i = ($scope.selected); i < $scope.topics.length; i++){
+			if($scope.topics[i])
+				$scope.topics[i] = false
+		}
 	};
 
 	//lock icon toggle
 	$scope.open = ["747315.png", "747315.png", "747315.png", "747315.png", "747315.png"];
-	$scope.lock = [true, true, true, true, true, true];
+	$scope.lock = [true, true, true, true, true];
 
 	//toggle 
 	$scope.locker = function (number) {

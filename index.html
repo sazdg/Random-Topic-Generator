@@ -54,10 +54,10 @@
 
 				<div class="row sub">
 					<div class="col-md-4 col-xs-3"></div>
-					<div class="argomento col-md-4 col-xs-5" ng-show="uno">
+					<div class="argomento col-md-4 col-xs-5" ng-show="topics[0]">
 						<span ng-model="lock[0]">{{ sub[0] }}</span>
 					</div>
-					<div ng-show="uno" ng-model="lock[0]"  class="col-md-1 col-xs-1">
+					<div ng-show="topics[0]" ng-model="lock[0]"  class="col-md-1 col-xs-1">
 						<button ng-class="lock[0] ? 'lock-open' : 'lock-close'"><img src="{{open[0]}}" alt="lock" height="25" width="25"
 								ng-click="locker(0)"></button>
 					</div>
@@ -66,10 +66,10 @@
 				
 				<div class="row sub">
 					<div class="col-md-4 col-xs-3"></div>
-					<div class="argomento col-md-4 col-xs-5" ng-show="due">
+					<div class="argomento col-md-4 col-xs-5" ng-show="topics[1]">
 						<span ng-model="lock[1]">{{ sub[1] }}</span>
 					</div>
-					<div ng-show="due" ng-model="lock[1]"  class="col-md-1 col-xs-1">
+					<div ng-show="topics[1]" ng-model="lock[1]"  class="col-md-1 col-xs-1">
 						<button ng-class="lock[1] ? 'lock-open' : 'lock-close'"><img src="{{open[1]}}" alt="lock" height="25" width="25"
 								ng-click="locker(1)"></button>
 					</div>
@@ -79,10 +79,10 @@
 				
 				<div class="row sub">
 					<div class="col-md-4 col-xs-3"></div>
-					<div class="argomento col-md-4 col-xs-5" ng-show="tre">
+					<div class="argomento col-md-4 col-xs-5" ng-show="topics[2]">
 						<span ng-model="lock[2]">{{ sub[2] }}</span>
 					</div>
-					<div ng-show="tre" ng-model="lock[2]"  class="col-md-1 col-xs-1">
+					<div ng-show="topics[2]" ng-model="lock[2]"  class="col-md-1 col-xs-1">
 						<button ng-class="lock[2] ? 'lock-open' : 'lock-close'"><img src="{{open[2]}}" alt="lock" height="25" width="25"
 								ng-click="locker(2)"></button>
 					</div>
@@ -92,10 +92,10 @@
 				
 				<div class="row sub">
 					<div class="col-md-4 col-xs-3"></div>
-					<div class="argomento col-md-4 col-xs-5" ng-show="quattro">
+					<div class="argomento col-md-4 col-xs-5" ng-show="topics[3]">
 						<span ng-model="lock[3]">{{ sub[3] }}</span>
 					</div>
-					<div ng-show="quattro" ng-model="lock[3]"  class="col-md-1 col-xs-1">
+					<div ng-show="topics[3]" ng-model="lock[3]"  class="col-md-1 col-xs-1">
 						<button ng-class="lock[3] ? 'lock-open' : 'lock-close'"><img src="{{open[3]}}" alt="lock" height="25" width="25"
 								ng-click="locker(3)"></button>
 					</div>
@@ -104,10 +104,10 @@
 				
 				<div class="row sub">
 					<div class="col-md-4 col-xs-3"></div>
-					<div class="argomento col-md-4 col-xs-5" ng-show="cinque">
+					<div class="argomento col-md-4 col-xs-5" ng-show="topics[4]">
 						<span ng-model="lock[4]">{{ sub[4] }}</span>
 					</div>
-					<div ng-show="cinque" ng-model="lock[4]" class="col-md-1 col-xs-1">
+					<div ng-show="topics[4]" ng-model="lock[4]" class="col-md-1 col-xs-1">
 						<button ng-class="lock[4] ? 'lock-open' : 'lock-close'"><img src="{{open[4]}}" alt="lock" height="25" width="25"
 								ng-click="locker(4)"></button>
 					</div>

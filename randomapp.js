@@ -74,19 +74,4 @@ app.controller("ctrl", function ($scope) {
 	$scope.reset = function () {
 		window.location.reload();
 	};
-}).directive('topicList', function () {
-	return {
-		template: `
-		<div class="row sub" ng-repeat="topic in topics track by $index" ng-show="topic">
-			<div class="col-md-4 col-xs-3"></div>	
-			<div class="argomento col-md-4 col-xs-5" ng-show="topic">
-				<span ng-model="lock[$index]">{{ sub[$index] }}</span>
-			</div>
-			<div ng-show="topic" ng-model="lock[$index]"  class="col-md-1 col-xs-1">
-				<button ng-class="lock[$index] ? 'lock-open' : 'lock-close'">
-					<img src="{{open[$index]}}" alt="lock" height="25" width="25" ng-click="locker($index)"></button>
-			</div>
-			<div class="col-md-3 col-xs-1"></div>
-		</div>`
-	};
 });

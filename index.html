@@ -12,128 +12,79 @@
 
 	<!--Google Font-->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:wght@900&family=Teko:wght@700&display=swap" rel="stylesheet">
-	<!--Boostrap CSS CDN--> 
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  	<!--JQUERY CDN-->
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  	<!--Bootstrap Javascript CDN-->
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:wght@900&family=Teko:wght@700&display=swap"
+		rel="stylesheet">
+	<!--Boostrap CSS CDN-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!--JQUERY CDN-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!--Bootstrap Javascript CDN-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
- 
-	</head>
 
-		<body ng-app="randomApp" ng-controller="ctrl">
-			<nav>
-			<div class="row">
+</head>
+
+<body ng-app="randomApp" ng-controller="ctrl">
+	<nav>
+		<div class="row">
 			<div class="navbar container-fluid text-center" id="nav">
 				<h2><strong>TOPIC GENERATOR</strong></h2>
 			</div>
 		</div>
 
-			</nav>
-		<div class="row">
+	</nav>
+	<div class="row">
 		<div class="container-fluid text-center corpo">
 			<br>
 			<br>
 			<p id="enjoy"> Choose how many topics you want,<br>
 				Click the button to see a random result.<br>
 				Enjoy</p><br>
-				<label for="number">Select a number of topics</label><br>
-				<select id="select" name="number" ng-change="choose()" ng-model="selected">
+			<label for="number">Select a number of topics</label><br>
+			<select id="select" name="number" ng-change="choose()" ng-model="selected">
 				<option value="1">1 topic</option>
 				<option value="2">2 topics</option>
 				<option value="3">3 topics</option>
 				<option value="4">4 topics</option>
 				<option value="5">5 topics</option>
-				</select><br>
+			</select><br>
 
 
+			<button ng-click="random()" id="start">START</button><br><br>
+
+			<div class="row sub" ng-repeat="topic in topics track by $index" ng-show="topic">
+				<div class="col-md-4 col-xs-3"></div>
+				<div class="argomento col-md-4 col-xs-5" ng-show="topic">
+					<span ng-model="lock[$index]">{{sub[$index]}}</span>
+				</div>
+				<div ng-show="topic" ng-model="lock[$index]" class="col-md-1 col-xs-1">
+					<button ng-class="lock[$index] ? 'lock-open' : 'lock-close'">
+						<img src="{{open[$index]}}" alt="lock" height="25" width="25"
+							ng-click="locker($index)"></button>
+				</div>
+				<div class="col-md-3 col-xs-1"></div>
+			</div>
 			
-				<button ng-click="random()" id="start">START</button><br><br>
-
-				<div class="row sub">
-					<div class="col-md-4 col-xs-3"></div>
-					<div class="argomento col-md-4 col-xs-5" ng-show="topics[0]">
-						<span ng-model="lock[0]">{{ sub[0] }}</span>
-					</div>
-					<div ng-show="topics[0]" ng-model="lock[0]"  class="col-md-1 col-xs-1">
-						<button ng-class="lock[0] ? 'lock-open' : 'lock-close'"><img src="{{open[0]}}" alt="lock" height="25" width="25"
-								ng-click="locker(0)"></button>
-					</div>
-					<div class="col-md-3 col-xs-1"></div>
-				</div>
-				
-				<div class="row sub">
-					<div class="col-md-4 col-xs-3"></div>
-					<div class="argomento col-md-4 col-xs-5" ng-show="topics[1]">
-						<span ng-model="lock[1]">{{ sub[1] }}</span>
-					</div>
-					<div ng-show="topics[1]" ng-model="lock[1]"  class="col-md-1 col-xs-1">
-						<button ng-class="lock[1] ? 'lock-open' : 'lock-close'"><img src="{{open[1]}}" alt="lock" height="25" width="25"
-								ng-click="locker(1)"></button>
-					</div>
-					<div class="col-md-3 col-xs-1"></div>
-				</div>
-				
-				
-				<div class="row sub">
-					<div class="col-md-4 col-xs-3"></div>
-					<div class="argomento col-md-4 col-xs-5" ng-show="topics[2]">
-						<span ng-model="lock[2]">{{ sub[2] }}</span>
-					</div>
-					<div ng-show="topics[2]" ng-model="lock[2]"  class="col-md-1 col-xs-1">
-						<button ng-class="lock[2] ? 'lock-open' : 'lock-close'"><img src="{{open[2]}}" alt="lock" height="25" width="25"
-								ng-click="locker(2)"></button>
-					</div>
-					<div class="col-md-3 col-xs-1"></div>
-				</div>
-				
-				
-				<div class="row sub">
-					<div class="col-md-4 col-xs-3"></div>
-					<div class="argomento col-md-4 col-xs-5" ng-show="topics[3]">
-						<span ng-model="lock[3]">{{ sub[3] }}</span>
-					</div>
-					<div ng-show="topics[3]" ng-model="lock[3]"  class="col-md-1 col-xs-1">
-						<button ng-class="lock[3] ? 'lock-open' : 'lock-close'"><img src="{{open[3]}}" alt="lock" height="25" width="25"
-								ng-click="locker(3)"></button>
-					</div>
-					<div class="col-md-3 col-xs-1"></div>
-				</div>
-				
-				<div class="row sub">
-					<div class="col-md-4 col-xs-3"></div>
-					<div class="argomento col-md-4 col-xs-5" ng-show="topics[4]">
-						<span ng-model="lock[4]">{{ sub[4] }}</span>
-					</div>
-					<div ng-show="topics[4]" ng-model="lock[4]" class="col-md-1 col-xs-1">
-						<button ng-class="lock[4] ? 'lock-open' : 'lock-close'"><img src="{{open[4]}}" alt="lock" height="25" width="25"
-								ng-click="locker(4)"></button>
-					</div>
-					<div class="col-md-3 col-xs-1"></div>
-				</div>
-				
-				<br><br>
-				<button ng-click="reset()" id="reset">RESET</button><br><br><br>
-
+			<br><br>
+			<button ng-click="reset()" id="reset">RESET</button><br><br><br>
 		</div>
 	</div>
 
 	<div class="row">
 		<div class="container-fluid footer">
 			<div class="text-center">
-			<span>2021 cc Sara De Grandis</span>
+				<span>2021 cc Sara De Grandis</span>
 			</div>
 		</div>
 	</div>
 
 
 	<!--Angular-->
-  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-  	<script src="randomapp.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script src="randomapp.js"></script>
 
-   	<!--ngAnimate google CDN-->
-  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.js"></script>
-	</body>
+	<!--ngAnimate google CDN-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.js"></script>
+</body>
 </html>

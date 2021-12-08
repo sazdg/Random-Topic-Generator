@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>Random Topic Generator</title>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,8 +22,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<!--Bootstrap Javascript CDN-->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
 </head>
 
 <body ng-app="randomApp" ng-controller="ctrl">
@@ -32,8 +31,8 @@
 				<h2><strong>TOPIC GENERATOR</strong></h2>
 			</div>
 		</div>
-
 	</nav>
+
 	<div class="row">
 		<div class="container-fluid text-center corpo">
 			<br>
@@ -50,13 +49,13 @@
 				<option value="5">5 topics</option>
 			</select><br>
 
-
 			<button type="button" ng-click="random()" id="start">START</button><br><br>
 
 			<div class="row sub" ng-repeat="topic in topics track by $index" ng-show="topic">
 				<div class="col-md-4 col-xs-3"></div>
 				<div class="argomento col-md-4 col-xs-5" ng-show="topic">
 					<span ng-model="lock[$index]">{{sub[$index]}}</span>
+
 				</div>
 				<div ng-show="topic" ng-model="lock[$index]" class="col-md-1 col-xs-1">
 					<button type="button" ng-class="lock[$index] ? 'lock-open' : 'lock-close'">
@@ -64,9 +63,8 @@
 							ng-click="locker($index)"></button>
 				</div>
 				<div class="col-md-3 col-xs-1"></div>
-			</div>
-			
-			<br><br>
+			</div><br><br>
+
 			<button type="button" ng-click="reset()" id="reset">RESET</button><br><br><br>
 		</div>
 	</div>
@@ -78,8 +76,6 @@
 			</div>
 		</div>
 	</div>
-
-
 	<!--Angular-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 	<script src="randomapp.js"></script>
@@ -87,4 +83,5 @@
 	<!--ngAnimate google CDN-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.js"></script>
 </body>
+
 </html>

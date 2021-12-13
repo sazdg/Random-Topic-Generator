@@ -13,8 +13,7 @@
 
 	<!--Google Font-->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:wght@900&family=Teko:wght@700&display=swap"
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:wght@900&family=Teko:wght@700&display=swap"
 		rel="stylesheet">
 	<!--Boostrap CSS CDN-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -34,13 +33,11 @@
 	</nav>
 
 	<div class="row">
-		<div class="container-fluid text-center corpo">
-			<br>
-			<br>
+		<div class="container-fluid text-center corpo"><br><br>
 			<p id="enjoy"> Choose how many topics you want,<br>
 				Click the button to see a random result.<br>
 				Enjoy</p><br>
-			<label for="number">Select a number of topics</label><br>
+			<p>Select a number of topics:</p>
 			<select id="select" name="number" ng-change="choose()" ng-model="selected">
 				<option value="1">1 topic</option>
 				<option value="2">2 topics</option>
@@ -70,6 +67,15 @@
 	</div>
 
 	<div class="row">
+		<div class="container-fluid text-center">
+			<p>What is Random Topic Generator?<br/>
+			This generator will pick randomly subjects for you<br/>
+			Perfect for ilustrations, pictures, memes and more <br/>
+			Over 200 subjects</p><br/>
+		</div>
+	</div>
+
+	<div class="row">
 		<div class="container-fluid footer">
 			<div class="text-center">
 				<span>2021 cc Sara De Grandis</span>
@@ -79,7 +85,6 @@
 	<!--Angular-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 	<script src="randomapp.js"></script>
-
 	<!--ngAnimate google CDN-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.js"></script>
 </body>

@@ -43,11 +43,7 @@ div.row {
 	padding: 1em;
 	position: static;
 }
-/*.container{
-	display: inline-flex;
-	align-items: center;
-	justify-content: flex-end;
-}*/
+
 
 .sub {
 	display: flex;
@@ -95,6 +91,9 @@ button {
 #reset {
 	background-color: #ff552b;
 	box-shadow: 5px 5px #ff7f7b;
+	font-size: 15px;
+	padding: 5px;
+	width: 70px;
 }
 .footer {
 	background-color: #16697A;
